@@ -1,0 +1,28 @@
+- item_nr: '1'
+  category: Organisational Governance
+  respondent: Top manager
+  description: The organisation has defined the set of values that should guide the development of AI systems.
+  deliverable: Description of the norms and values.
+- item_nr: '2'
+  category: Organisational Governance
+  respondent: Top manager
+  description: These values have been published/communicated externally.
+  deliverable: Short description of how values were communicated externally.
+- item_nr: '3'
+  category: Organisational Governance
+  respondent: Top manager
+  description: These values have been communicated to internal AI project stakeholders.
+  deliverable: Short description of how values were communicated internally
+- item_nr: '4'
+  category: Organisational Governance
+  respondent: Top manager
+  description: A governance framework for AI projects has been defined.
+  deliverable: Short description of the AI governance framework, i.e., 
+    how adherence to the organisational values will be ensured and demonstrated in practice.
+- item_nr: '5'
+  category: Organisational Governance
+  respondent: Top manager
+  description: The responsibility for ensuring and demonstrating that AI systems adhere to 
+    defined organisational values has been assigned.
+  deliverable: Name(s) of the person assigned.
+  
