@@ -1,28 +1,279 @@
 - item_nr: '1'
+  stage: design
   category: Organisational Governance
   respondent: Top manager
   description: The organisation has defined the set of values that should guide the development of AI systems.
   deliverable: Description of the norms and values.
+
 - item_nr: '2'
+  stage: design
   category: Organisational Governance
   respondent: Top manager
   description: These values have been published/communicated externally.
   deliverable: Short description of how values were communicated externally.
+
 - item_nr: '3'
+  stage: design
   category: Organisational Governance
   respondent: Top manager
   description: These values have been communicated to internal AI project stakeholders.
   deliverable: Short description of how values were communicated internally
+
 - item_nr: '4'
+  stage: design
   category: Organisational Governance
   respondent: Top manager
   description: A governance framework for AI projects has been defined.
   deliverable: Short description of the AI governance framework, i.e., 
     how adherence to the organisational values will be ensured and demonstrated in practice.
+
 - item_nr: '5'
+  stage: design
   category: Organisational Governance
   respondent: Top manager
   description: The responsibility for ensuring and demonstrating that AI systems adhere to 
     defined organisational values has been assigned.
-  deliverable: Name(s) of the person assigned.
+  deliverable: Name(s) of the person assigned.  
   
+- item_nr: '7'
+  stage: design
+  category: Use Case 
+  respondent: Project manager
+  description: The AI application has been assessed against the ethical values.
+  deliverable: Ethical assessment.
+
+- item_nr: '8'
+  stage: design
+  category: Use Case 
+  respondent: Project manager
+  description: Performance criteria for the AI application have been defined.
+  deliverable: Requirement specification document.
+
+- item_nr: '9'
+  stage: design
+  category: Use Case 
+  respondent: Project manager
+  description: The overall environmental impact for this AI application has been assessed.
+  deliverable: Assessment of the environmental impact of the AI application.
+
+- item_nr: '10'
+  stage: development
+  category: Data
+  respondent: Project manager
+  description: The data used to develop the AI application has been documented.
+  deliverable: List of data used in the AI application.
+
+- item_nr: '11'
+  stage: development
+  category: Data
+  respondent: Project manager
+  description: Data used in the development has been checked for representativeness, relevance,
+    accuracy, traceability (e.g., external data) and completeness.
+  deliverable: Data impact assessment, conform":" IAF Ethical Data Impact Assessment or CNIL(Privacy Impact Assessment).
+
+- item_nr: '12'
+  stage: development
+  category: Data
+  respondent: Project manager
+  description: The risks identified in the data impact assessment have been considered and addressed.
+  deliverable: Handling missing data; handling imbalance data; scaling; normalisation.
+
+- item_nr: '13'
+  stage: development
+  category: Data
+  respondent: Project manager
+  description: Legal compliance with respect to data protection has been assessed, e.g., GDPR.
+  deliverable: Data compliance assessment, including a list of protected attributes.
+
+- item_nr: '14'
+  stage: development
+  category: Model
+  respondent: Project manager
+  description: The source of the model has been documented.
+  deliverable: Source of the model.
+
+- item_nr: '15'
+  stage: development
+  category: Model
+  respondent: Project manager
+  description: The selection of the model has been assessed with regard to fairness, explainability and robustness.
+  deliverable: List of risks identified.
+
+- item_nr: '16'
+  stage: development
+  category: Model
+  respondent: Project manager
+  description: The risks identified in the model have been considered and addressed.
+  deliverable: List of assurance countermeasures.
+
+- item_nr: '17'
+  stage: development
+  category: Model
+  respondent: Project manager
+  description: The strategy for validating the model has been defined.
+  deliverable: Brief description of the validation strategy.
+
+- item_nr: '18'
+  stage: development
+  category: Model
+  respondent: Data scientist
+  description: The organisation documented the AI performance in the training environment.
+  deliverable: Performance on the training set in relation to agreed objectives.
+
+- item_nr: '19'
+  stage: development
+  category: Model
+  respondent: Data scientist
+  description: The setting of hyperparameters has been documented .
+  deliverable: Justification for the selection and levels of hyperparameters used.
+
+- item_nr: '20'
+  stage: development
+  category: Model
+  respondent: Project manager
+  description: The model fulfils the established performance criteria levels.
+  deliverable: Documentation of model performance.
+
+- item_nr: '21'
+  stage: evaluation
+  category: Test
+  respondent: Project manager
+  description: . The strategy for testing the model has been defined.
+  deliverable: Short description of the validation strategy.
+
+- item_nr: '22'
+  stage: evaluation
+  category: Test
+  respondent: Data scientist
+  description: The organisation has documented the AI performance in the testing environment.
+  deliverable: Documentation model performance on the testing set in statistical terms.
+
+- item_nr: '23'
+  stage: evaluation
+  category: Test
+  respondent: Data scientist
+  description: The model has been tested for performance on extreme values and protected attributes.
+  deliverable: Short description of performance on extreme values and protected attributes.
+
+- item_nr: '24'
+  stage: evaluation
+  category: Test
+  respondent: Data scientist
+  description: Patterns of failure have been identified.
+  deliverable: FMEA, e.g., error curves, overfitting analysis, exploration of incorrect predictions.
+
+- item_nr: '25'
+  stage: evaluation
+  category: Test
+  respondent: Data scientist
+  description: Key failure modes have been addressed .
+  deliverable: Short description of how to resolve or account for key failure modes.
+
+- item_nr: '26'
+  stage: evaluation
+  category: Test
+  respondent: Project manager
+  description: The model fulfils the established performance criteria levels.
+  deliverable: Documentation of model performance.
+
+- item_nr: '27'
+  stage: evaluation
+  category: Deploy
+  respondent: Product owner
+  description: The deployment strategy has been documented.
+  deliverable: Short description of the deployment strategy.
+
+- item_nr: '28'
+  stage: evaluation
+  category: Deploy
+  respondent: Product owner
+  description: The serving strategy has been documented.
+  deliverable: Short description of the serving strategy.
+
+- item_nr: '29'
+  stage: evaluation
+  category: Deploy
+  respondent: Product owner
+  description: The risks associated with the given serving and deployment strategies have been identified.
+  deliverable: Short description of identified risks.
+
+- item_nr: '30'
+  stage: evaluation
+  category: Deploy
+  respondent: Product owner
+  description: The risks associated with the given serving and deployment strategies have been addressed.
+  deliverable: Short description of how to resolve or account for key risks.
+
+- item_nr: '31'
+  stage: evaluation
+  category: Deploy
+  respondent: Product owner
+  description: The model fulfils the established performance criteria levels in the production environment.
+  deliverable: Performance in the production environment.
+
+- item_nr: '32'
+  stage: operation
+  category: Sustain
+  respondent: Product owner
+  description: The risks associated with changing data quality and potential data drift have been identified.
+  deliverable: A short description of the risks associated with data quality is captured (e.g., data drift, bias drift, 
+    feature attribution drift).
+
+- item_nr: '33'
+  stage: operation
+  category: Sustain
+  respondent: Product owner
+  description: The risks associated with model decay have been identified.
+  deliverable: A short description of the risks associated with model decay is captured.
+
+- item_nr: '34'
+  stage: operation
+  category: Sustain
+  respondent: Product owner
+  description: The strategy for monitoring and addressing risks associated with data quality and drift; 
+    and model decay has been defined.
+  deliverable: Outline of monitoring strategy (e.g., error classification, critical threshold values for data drift and model decay).
+
+- item_nr: '35'
+  stage: operation
+  category: Sustain
+  respondent: Top manager
+  description: Periodic reviews of the AI applications with regard to the ethical values have been set.
+  deliverable: Review schedule and format.
+
+- item_nr: '36'
+  stage: operation
+  category: Maintain
+  respondent: Product owner
+  description: The organisation has a strategy for how to update the AI application continuously.
+  deliverable: Frequency of updates and documentation of model changes.
+
+- item_nr: '37'
+  stage: operation
+  category: Maintain
+  respondent: Product owner
+  description: . A complaints process has been established for users of the AI system to raise concerns or suggest improvements.
+  deliverable: Short description of the complaints process (e.g., point of contact).
+
+- item_nr: '38'
+  stage: operation
+  category: Maintain
+  respondent: Product owner
+  description: A problem-to-resolution process has been defined.
+  deliverable: Outline of problem-toresolution process.
+
+- item_nr: '39'
+  stage: retirement
+  category: Retirement
+  respondent: Product owner
+  description: The risks of decommissioning the AI system have been assessed.
+  deliverable: Documentation of decommissioning risks.
+
+- item_nr: '40'
+  stage: retirement
+  category: Retirement
+  respondent: Top manager
+  description: The strategy for addressing risks associated with decommissioning the AI system.
+  deliverable: Outline of the strategy to manage the risks of decommissioning AI (e.g., data residuals":" 
+    what will happen to data records, model accessibility and interfaces to other systems).
+     

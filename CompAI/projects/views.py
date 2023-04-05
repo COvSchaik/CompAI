@@ -13,7 +13,8 @@ import yaml
 @login_required(login_url='signin')
 def projects(request):
     userdisplay = User.objects.all()
-    project_list = Project.objects.all()
+    project_list = Project.objects.filter(status = "active")
+    archived = Project.objects.filter(status = "archived")
 
     if request.method == 'POST':
         form = ProjectForm(request.POST or None)        
@@ -26,15 +27,21 @@ def projects(request):
             proj.members.set(selected_users) 
             proj.members.add(request.user)    
             proj.save()
-        return redirect("projects/detail/" + str(proj.id))
+        return redirect("detail/" + str(proj.id))
     
 
     else:
         form = ProjectForm()
 
     
-    context = {'projects': project_list, 'form': form, 'userdisplay': userdisplay}
+    context = {'projects': project_list, 'form': form, 'userdisplay': userdisplay, 'archived':archived}
     return render (request, 'projects.html', context)
+
+
+def delete_project(request, pk):
+    project = Project.objects.get(pk=pk)
+    project.delete()
+    return redirect('/projects')
 
 
 @login_required(login_url='signin')
@@ -53,7 +60,7 @@ def detail(request, pk):
             project.description = edit['description']
             project.startdate = edit['startdate']   
             # project.enddate.set(request.POST.get('enddate'))
-            project.enddate = request.POST.get('enddate')
+            # project.enddate = request.POST.get('enddate')
 
             # Add the selected users to the project's team members
             project.save()
@@ -92,11 +99,11 @@ def detail(request, pk):
                 item.assessment = asses
                 item.item_count = item_count + 1
                 item.item_nr = i["item_nr"]
-                item.stage = "design"
+                item.stage = i["stage"]
                 item.category = i["category"]
                 item.respondent = i["respondent"]
                 item.description =i["description"]
-                item.deliverable = i["deliverable"]
+                item.deliverable_description = i["deliverable"]
                 item.modified_by = request.user
 
 

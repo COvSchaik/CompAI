@@ -17,7 +17,7 @@ class Assessment(models.Model):
     
 class Item (models.Model):
     assessment = models.ForeignKey(Assessment, on_delete=models.CASCADE, related_name = 'items')
-    item_count = models.IntegerField(null=True, blank=True)    
+    item_count = models.IntegerField(null=True, blank=True)
     item_nr = models.IntegerField(null=True, blank=True)
     stage = models.CharField(max_length=100, default="design")
     category = models.CharField(max_length=100, null=True, blank=True)
