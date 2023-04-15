@@ -63,87 +63,112 @@
                 </div>
               </div>
               <div class="col-4">
-                <div class="row row-cards">
-                  <div class="col-12">
+                <div class="row row-cards">                  
+                  <div class="col-12">                    
                     <div class="card">
                       <div class="card-header">
-                        <h3 class="card-title">
-                          Project Details
-                        </h3>
-                        <div class="card-actions">
-                          <a href="#"class="" data-bs-toggle="modal" data-bs-target="#modal-project">
-                            Edit info<!-- Download SVG icon from http://tabler-icons.io/i/edit -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon ms-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" /><path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" /><path d="M16 5l3 3" /></svg>
-                          </a>
+                        <h3 class="card-title">Category: {{item.template.category}}</h3>
+                      </div> 
+                      <div class="card-body">
+                        <div class="markdown">
+                          <h2>Description:</h4> 
+                          <p>{{item.template.description}}</p>
+                          <p></p>
                         </div>
+                        <div class="markdown">
+                          <h2>Deliverable:</h4>
+                          <p>{{item.template.deliverable_description}}</p>
+                          <p></p>
+                        </div>                          
                       </div>
-                      <div class="card-body">                        
-                      </div>
-                    </div> 
-                  </div>
-                  <div class="col-12">
-                    <div class="card">
-                      <div class="card-header">
-                        <h3 class="card-title">Graph</h3>
-                      </div>                      
-                    </div>                    
+                    </div>                   
                   </div>
                 </div>                
               </div>
-              <div class="col-8"> 
-                <div class="card">
-                  <div class="card-header">
-                    <h3 class="card-title">{{item.category}}</h3>
-                  </div> 
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-4 ">
-                        <div class="markdown">
-                          <h4>Description:</h4> 
-                          <p>{{item.description}}</p>
-                          <p></p>
-                        </div> 
-                        
-                        <div class="markdown">
-                          <h4>Deliverable:</h4>
-                          <p>{{item.deliverable_description}}</p>
-                          <p></p>
-                        </div> 
+              <div class="col-8">
+                <form method=POST>
+                  {% csrf_token %} 
+                  <div class="card">
+                    <div class="card-header">                    
+                      <h3 class="card-title">Maturity levels:</h3>
+                      <div class="card-actions">
+                        {%if not item.saved%}
+                        <div class="ribbon bg-red">   
+                          Not Saved         
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-alert-triangle" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M10.24 3.957l-8.422 14.06a1.989 1.989 0 0 0 1.7 2.983h16.845a1.989 1.989 0 0 0 1.7 -2.983l-8.423 -14.06a1.989 1.989 0 0 0 -3.4 0z"></path>
+                            <path d="M12 9v4"></path>
+                            <path d="M12 17h.01"></path>
+                        </svg>
+                        </div>                     
+                        {%else%}
+                        <div class="ribbon bg-green">   
+                                  
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                            <path d="M9 12l2 2l4 -4"></path>
+                        </svg>
+                        </div>  
+                        {%endif%}                 
                       </div>
+                      
+                    </div> 
 
-                      <div class="col-8">                        
-                        
-                      </div>
-                    </div>                    
-                  </div>
-                  <div class="card-footer">
-                    <div class="d-flex">
-                      <a href="#" class="btn btn-link">Cancel</a>
-                      <a href="#" class="btn btn-primary ms-auto">Save</a>
+
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-6">
+                          {%for level in item.template.levels.all %}
+                            <h4> {{level.value}}: {{level.name}}</h4>
+                            {{level.description}}
+                            <p></p>
+                          {%endfor%}
+                          
+                        </div>                      
+                      {% comment %} </div>
+                      <div class="row"> {% endcomment %}
+                        <div class="col-6">
+                          {{form.as_p}}
+                        </div>
+
+                        <div class="col-6">
+                          
+                          
+                                                  
+                        </div>
+                      </div>                    
                     </div>
-                  
-
-                    <ul class="pagination ">                    
-                        <li class="page-item {% if not items.has_previous %} disabled {% endif %}">
-                          <a class="page-link" href="{% if items.has_previous %}?page={{ items.previous_page_number }}{% endif %}" tabindex="-1" aria-disabled="true">
-                            <!-- Download SVG icon from http://tabler-icons.io/i/chevron-left -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
-                            prev
+                    <div class="card-footer">
+                      <div class="d-flex">    
+                        <ul class="pagination ">                    
+                          <li class="page-item {% if not items.has_previous %} disabled {% endif %}">
+                            <a class="page-link" href="{% if items.has_previous %}?page={{ items.previous_page_number }}{% endif %}" tabindex="-1" aria-disabled="true">
+                              <!-- Download SVG icon from http://tabler-icons.io/i/chevron-left -->
+                              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
+                              prev
+                            </a>
+                          </li>
+                          {%for i in nums %}
+                            <li class="page-item{%if forloop.counter == items.number%} active {%endif%}">
+                              <a class="page-link" href="?page={{forloop.counter}}">{{forloop.counter}}</a></li>
+                          {%endfor%}
+                        <li class="page-item {% if not items.has_next %} disabled {% endif %}"> 
+                          <a class="page-link" href="{% if items.has_next %}?page={{ items.next_page_number }}{% endif %}">
+                            next <!-- Download SVG icon from http://tabler-icons.io/i/chevron-right -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
                           </a>
                         </li>
-                        {%for i in nums %}
-                          <li class="page-item{%if forloop.counter == items.number%} active {%endif%}">
-                            <a class="page-link" href="?page={{forloop.counter}}">{{forloop.counter}}</a></li>
-                        {%endfor%}
-                      <li class="page-item {% if not items.has_next %} disabled {% endif %}"> 
-                        <a class="page-link" href="{% if items.has_next %}?page={{ items.next_page_number }}{% endif %}">
-                          next <!-- Download SVG icon from http://tabler-icons.io/i/chevron-right -->
-                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div> 
+                      </ul>
+                        <button type="submit" class="btn btn-primary ms-auto" name = 'action' value = "save-item">Save</button>                      
+                      </div>
+                    
+
+                      
+                    </div>
+                  </div> 
+                </form>
               </div>
             </div>          
           </div>

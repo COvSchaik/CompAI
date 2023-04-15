@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from .models import Project
 from irp_assessment.models import Assessment
 from irp_assessment.models import Item
+from frameworks.models import Framework
 from datetime import datetime
 
 import yaml
@@ -90,20 +91,21 @@ def detail(request, pk):
             asses.project = project            
             asses.save()
 
-            with open('yaml/assessment/items.yaml', 'r') as file:
-                questions = yaml.load(file, Loader=yaml.FullLoader)
+            template = Framework.objects.get(name= asses.framework)          
+            items = template.items.all()
 
             item_count = 0
-            for i in questions:
+            for i in items:
                 item = Item()
                 item.assessment = asses
                 item.item_count = item_count + 1
-                item.item_nr = i["item_nr"]
-                item.stage = i["stage"]
-                item.category = i["category"]
-                item.respondent = i["respondent"]
-                item.description =i["description"]
-                item.deliverable_description = i["deliverable"]
+                item.item_nr = i.item_nr
+                item.stage = i.stage
+                item.template = i
+                # item.category = i["category"]
+                # item.respondent = i["respondent"]
+                # item.description =i["description"]
+                # item.deliverable_description = i["deliverable"]
                 item.modified_by = request.user
 
 

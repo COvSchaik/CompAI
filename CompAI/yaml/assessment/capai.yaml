@@ -1,0 +1,1204 @@
+- item_nr: '1'
+  name: Initial
+  value: 1
+  description: "Values have not been defined."
+
+- item_nr: '1'
+  name: Repeatable
+  value: 2
+  description: "Guiding values are defined."
+
+- item_nr: '1'
+  name: Defined
+  value: 3
+  description: "Values are approved by senior management."
+
+- item_nr: '1'
+  name: Managed and Measurable
+  value: 4
+  description:  "- Values  are acknowledged as leading for all the organisations  activities.
+  - Alignment with values is documented where applicable.
+  - The validity and feasibility of the values is periodically verified."
+
+- item_nr: '1'
+  name: Continuous Improvement
+  value: 5
+  description: "Values are updated when necessary to be coherent with the organisations goals and external developments."
+
+
+
+
+- item_nr: '2'
+  name: Initial
+  value: 1
+  description: "Values have not been communicated externally."
+
+- item_nr: '2'
+  name: Repeatable
+  value: 2
+  description: "Values have been communicated externally."
+
+- item_nr: '2'
+  name: Defined
+  value: 3
+  description: "Values are freely available as hard copies and accessible for any external party. "
+
+- item_nr: '2'
+  name: Managed and Measurable
+  value: 4
+  description:  "Reflection of these values in procedures and policies are comunicated externally."
+
+
+- item_nr: '2'
+  name: Continuous Improvement
+  value: 5
+  description: "Changes and updates of values are communicated externally in a transparent manner."
+
+
+
+
+- item_nr: '3'
+  name: Initial
+  value: 1
+  description: "Values have not been communicated internally."
+
+- item_nr: '3'
+  name: Repeatable
+  value: 2
+  description: "Values have been communicated internally."
+
+- item_nr: '3'
+  name: Defined
+  value: 3
+  description: "Values are freely available as hard copies and accessible for the entire organisation."
+
+- item_nr: '3'
+  name: Managed and Measurable
+  value: 4
+  description:  "The values are part of an internal ethics awareness program."
+
+
+- item_nr: '3'
+  name: Continuous Improvement
+  value: 5
+  description: "Changes and updates of values are communicated internally in a transparent manner."
+
+
+
+
+- item_nr: '4'
+  name: Initial
+  value: 1
+  description: "There is no governance framework."
+
+- item_nr: '4'
+  name: Repeatable
+  value: 2
+  description: "A governance framework has been defined."
+
+- item_nr: '4'
+  name: Defined
+  value: 3
+  description: "- The governance framework has been aproved by senior management.
+  - Effectiveness and usage of the. framework is assessed on ad hoc basis."
+
+- item_nr: '4'
+  name: Managed and Measurable
+  value: 4
+  description:  " - The framework is adopted  organisationwide  and usage is documented.
+  -The framework is periodically evaluated updated and reapproved by management."
+
+
+- item_nr: '4'
+  name: Continuous Improvement
+  value: 5
+  description: "Reports about effectiveness of the framework are submitted to senior management. "
+
+
+
+
+
+- item_nr: '5'
+  name: Initial
+  value: 1
+  description: "No ownership, roles and responsibility are assigned."
+
+- item_nr: '5'
+  name: Repeatable
+  value: 2
+  description: "Ownership, roles and responsibility are assigned informally and ad hoc during projects."
+
+- item_nr: '5'
+  name: Defined
+  value: 3
+  description: " Ownership, roles and responsibility are formally assigned both on project and organisational level."
+
+- item_nr: '5'
+  name: Managed and Measurable
+  value: 4
+  description:  "Ownership, roles and responsibility are periodically evaluated."
+
+- item_nr: '5'
+  name: Continuous Improvement
+  value: 5
+  description: "Senior management reflects on responsibility evaluation."
+
+
+- item_nr: '6'
+  name: Initial
+  value: 1
+  description: "No objectives have been defined."
+
+- item_nr: '6'
+  name: Repeatable
+  value: 2
+  description: "Objectives have been defined but not formally documented."
+
+- item_nr: '6'
+  name: Defined
+  value: 3
+  description: "Objectives have been defined and are formally documented."
+
+- item_nr: '6'
+  name: Managed and Measurable
+  value: 4
+  description:  "Periodic assessments are in place to asses the relevance of the objectives and prevent function creep."
+
+- item_nr: '6'
+  name: Continuous Improvement
+  value: 5
+  description: "The objectives are updated with the growth of the application or 
+  change of scope these changes and their motivation are documented."
+
+
+
+- item_nr: '7'
+  name: Initial
+  value: 1
+  description: "There has been no ethical assessment."
+
+- item_nr: '7'
+  name: Repeatable
+  value: 2
+  description: "An ethical assessment has been executed."
+
+- item_nr: '7'
+  name: Defined
+  value: 3
+  description: "Ethical assessments are executed when necessary to keep up with application changes."
+
+- item_nr: '7'
+  name: Managed and Measurable
+  value: 4
+  description:  "Results of assessments are periodically evaluated and communicated externally."
+
+
+- item_nr: '7'
+  name: Continuous Improvement
+  value: 5
+  description: "Evaluations of assessment methods are periodically executed and documented."
+
+
+
+
+- item_nr: '8'
+  name: Initial
+  value: 1
+  description: "Performance criteria have not been defined."
+
+- item_nr: '8'
+  name: Repeatable
+  value: 2
+  description: "Performance criteria have been defined."
+
+- item_nr: '8'
+  name: Defined
+  value: 3
+  description: "The application is periodically tested against the criteria and results are formally documented."
+
+- item_nr: '8'
+  name: Managed and Measurable
+  value: 4
+  description:  "The performance criteria themselves are periodically evaluated."
+
+
+- item_nr: '8'
+  name: Continuous Improvement
+  value: 5
+  description: ""
+
+
+
+  
+- item_nr: '9'
+  name: Initial
+  value: 1
+  description: "There has been no environmental impast assessment."
+
+- item_nr: '9'
+  name: Repeatable
+  value: 2
+  description: "An environmental impact assessment has been executed."
+
+- item_nr: '9'
+  name: Defined
+  value: 3
+  description: "Environmetal impact assessments are executed when necessary to keep up with application changes."
+
+- item_nr: '9'
+  name: Managed and Measurable
+  value: 4
+  description:  "Results of assessments are periodically evaluated and communicated externally."
+
+
+- item_nr: '9'
+  name: Continuous Improvement
+  value: 5
+  description: "Evaluations of assessment methods are periodically executed and documented."
+
+
+
+
+
+
+- item_nr: '10'
+  name: Initial
+  value: 1
+  description: "Data used in the AI application has not been documented."
+
+- item_nr: '10'
+  name: Repeatable
+  value: 2
+  description: "Data used in the AI application has been documented informally and is incomplete or inaccurate."
+
+- item_nr: '10'
+  name: Defined
+  value: 3
+  description: "Data used in the AI application has been documented and is complete and accurate.
+- documantation includes, the data used, the category of data, the source and reason for usage."
+
+- item_nr: '10'
+  name: Managed and Measurable
+  value: 4
+  description:  "The documentation is periodically reviewed and updated when necessary."
+
+
+- item_nr: '10'
+  name: Continuous Improvement
+  value: 5
+  description: "The periodic documantation proces of used data is incorporated into the development cycle."
+
+
+
+- item_nr: '11'
+  name: Initial
+  value: 1
+  description: "No data impact assessments have been conducted."
+
+- item_nr: '11'
+  name: Repeatable
+  value: 2
+  description: "A data impact assessment has been carried out, but it is incomplete or inaccurate."
+
+- item_nr: '11'
+  name: Defined
+  value: 3
+  description: "A data impact assessment has been carried out, and is complete and accurate."
+
+- item_nr: '11'
+  name: Managed and Measurable
+  value: 4
+  description:  "New assessments are conducted when datasets, used data, sources are changed or added."
+
+
+- item_nr: '11'
+  name: Continuous Improvement
+  value: 5
+  description: "Assessment procedures are periodically reviewed to assure completeness, relevance and unbiasedness."
+
+
+
+
+- item_nr: '12'
+  name: Initial
+  value: 1
+  description: "No risks have been identified or addressed."
+
+- item_nr: '12'
+  name: Repeatable
+  value: 2
+  description: "Risks have been identified but not yet addressed."
+
+- item_nr: '12'
+  name: Defined
+  value: 3
+  description: "Risks have been identified and addressed to some extent but there are no mitigations in place."
+
+- item_nr: '12'
+  name: Managed and Measurable
+  value: 4
+  description:  "Risks are identified and addressed in a systematic manner."
+
+- item_nr: '12'
+  name: Continuous Improvement
+  value: 5
+  description: "The organisation has established a continuous improvement process to identify and address new risks and evolving threats."
+  
+
+
+
+
+- item_nr: '13'
+  name: Initial
+  value: 1
+  description: "No assessment of data protection regulations has been conducted."
+
+- item_nr: '13'
+  name: Repeatable
+  value: 2
+  description: "Assessment of data protection regulations has been conducted but no compliance measures have been implemented."
+
+- item_nr: '13'
+  name: Defined
+  value: 3
+  description: "Compliance measures have been implemented to address identified data protection issues."
+
+- item_nr: '13'
+  name: Managed and Measurable
+  value: 4
+  description:  "Compliance measures have been fully integrated into the organization's data handling practices."
+
+
+- item_nr: '13'
+  name: Continuous Improvement
+  value: 5
+  description: "Compliance measures are continuously monitored and updated to reflect changes in data protection regulations."
+
+
+
+
+
+- item_nr: '14'
+  name: Initial
+  value: 1
+  description: "There is no documentation of the source of the model."
+
+- item_nr: '14'
+  name: Repeatable
+  value: 2
+  description: "Ocumentation of the source of the model exists but is incomplete or inaccurate."
+
+- item_nr: '14'
+  name: Defined
+  value: 3
+  description: "Documentation of the source of the model is complete and accurate."
+
+- item_nr: '14'
+  name: Managed and Measurable
+  value: 4
+  description:  "Documentation of the source of the model is integrated into the organization's knowledge management systems."
+
+
+- item_nr: '14'
+  name: Continuous Improvement
+  value: 5
+  description: "Documentation of the source of the model is actively maintained and updated to reflect changes in the model's development."
+
+
+
+
+
+- item_nr: '15'
+  name: Initial
+  value: 1
+  description: "No assessment of the model's fairness, explainability, and robustness has been conducted."
+
+- item_nr: '15'
+  name: Repeatable
+  value: 2
+  description: "Assessment of the model's fairness, explainability, and robustness has been conducted but is incomplete or inaccurate."
+
+- item_nr: '15'
+  name: Defined
+  value: 3
+  description: "Assessment of the model's fairness, explainability, and robustness has been conducted and is complete and accurate."
+
+- item_nr: '15'
+  name: Managed and Measurable
+  value: 4
+  description:  "Fairness, explainability, and robustness assessments are fully integrated into the organization's development practices.
+- Assessment methods are periodically reviewed."
+
+
+- item_nr: '15'
+  name: Continuous Improvement
+  value: 5
+  description: "Fairness, explainability, and robustness are continuously monitored and assessed to keep up with changes in the model's development and external changes."
+
+
+
+
+
+
+- item_nr: '16'
+  name: Initial
+  value: 1
+  description: "No consideration or addressing of identified risks."
+
+- item_nr: '16'
+  name: Repeatable
+  value: 2
+  description: "Identified risks have been considered but not fully addressed."
+
+- item_nr: '16'
+  name: Defined
+  value: 3
+  description: "Identified risks have been addressed in the model."
+
+- item_nr: '16'
+  name: Managed and Measurable
+  value: 4
+  description:  "Risks mitigation fully integrated into the organization's model development practices."
+
+
+- item_nr: '16'
+  name: Continuous Improvement
+  value: 5
+  description: "Risks are continuously monitored, updated and mitigated to reflect changes in the model's development.
+"
+
+
+
+
+
+
+- item_nr: '17'
+  name: Initial
+  value: 1
+  description: "There is no validation strategy defined."
+
+- item_nr: '17'
+  name: Repeatable
+  value: 2
+  description: "A validation strategy is defined on ad-hoc basis  but not documented."
+
+- item_nr: '17'
+  name: Defined
+  value: 3
+  description: "The validation strategy is documented and communicated to stakeholders."
+
+- item_nr: '17'
+  name: Managed and Measurable
+  value: 4
+  description:  "he validation strategy is consistently followed, and its effectiveness is monitored."
+
+
+- item_nr: '17'
+  name: Continuous Improvement
+  value: 5
+  description: "The validation strategy is continuously improved based on feedback and experience."
+
+
+
+
+
+
+- item_nr: '18'
+  name: Initial
+  value: 1
+  description: "AI performance is not documented."
+
+- item_nr: '18'
+  name: Repeatable
+  value: 2
+  description: "AI performance is documented on ad-hoc basis."
+
+- item_nr: '18'
+  name: Defined
+  value: 3
+  description: "AI performance is regularly documented and monitored."
+
+- item_nr: '18'
+  name: Managed and Measurable
+  value: 4
+  description:  "AI performance documentation is integrated into the development process and is used to inform decisions."
+
+- item_nr: '18'
+  name: Continuous Improvement
+  value: 5
+  description: "AI performance documentation is used to continuously improve the AI system."
+
+
+
+
+
+
+- item_nr: '19'
+  name: Initial
+  value: 1
+  description: "Hyperparameters are not documented."
+
+- item_nr: '19'
+  name: Repeatable
+  value: 2
+  description: "Documentation of hyperparameters used, but not the justification for their selection."
+
+- item_nr: '19'
+  name: Defined
+  value: 3
+  description: "Justification for the selection of hyperparameters is documented."
+
+- item_nr: '19'
+  name: Managed and Measurable
+  value: 4
+  description:  "Selection of hyperparameters is based on established best practices and guidelines."
+
+
+- item_nr: '19'
+  name: Continuous Improvement
+  value: 5
+  description: " - Hyperparameter selection is regularly reviewed and updated based on feedback from system performance and user needs.
+  - The selection process for hyperparameters is documented and publicly available for transparency and accountability."
+
+
+
+
+
+
+- item_nr: '20'
+  name: Initial
+  value: 1
+  description: "Model performance is not documented."
+
+- item_nr: '20'
+  name: Repeatable
+  value: 2
+  description: "Model performance is documented on ad-hoc basis."
+
+- item_nr: '20'
+  name: Defined
+  value: 3
+  description: "Model performance is regularly documented."
+
+- item_nr: '20'
+  name: Managed and Measurable
+  value: 4
+  description:  "Performance criteria levels are actively monitored, and deviations are addressed promptly. Performance metrics are reported regularly."
+
+
+- item_nr: '20'
+  name: Continuous Improvement
+  value: 5
+  description: "- The model performance does not dictate the systems criteria levels.
+  - There are procedures in place to prevent this from happening."
+
+
+
+
+
+
+
+- item_nr: '21'
+  name: Initial
+  value: 1
+  description: "No testing strategy is defined."
+
+- item_nr: '21'
+  name: Repeatable
+  value: 2
+  description: "Testing is done on an ad-hoc basis."
+
+- item_nr: '21'
+  name: Defined
+  value: 3
+  description: "Testing strategy is formaly documented."
+
+- item_nr: '21'
+  name: Managed and Measurable
+  value: 4
+  description:  "The testing strategy is regularly reviewed and updated."
+
+
+- item_nr: '21'
+  name: Continuous Improvement
+  value: 5
+  description: "The testing strategy includes ethical considerations, such as testing for fairness and avoiding harm to vulnerable groups."
+
+
+
+
+
+
+- item_nr: '22'
+  name: Initial
+  value: 1
+  description: "No documentation of AI performance in the testing environment."
+
+- item_nr: '22'
+  name: Repeatable
+  value: 2
+  description: "AI performance in the testing environment is documented but not consistently."
+
+- item_nr: '22'
+  name: Defined
+  value: 3
+  description: "The organisation has a consistent and comprehensive method for documenting AI performance in the testing environment."
+
+- item_nr: '22'
+  name: Managed and Measurable
+  value: 4
+  description:  "The documentation of AI performance in the testing environment is regularly reviewed and updated, and the review process is well-defined and executed."
+
+
+- item_nr: '22'
+  name: Continuous Improvement
+  value: 5
+  description: "The organisation has an automated system for continuously monitoring and documenting AI performance in the testing environment, and the system is regularly reviewed and updated to ensure accuracy and completeness."
+
+
+
+
+
+- item_nr: '23'
+  name: Initial
+  value: 1
+  description: "No testing of model performance on extreme values and protected attributes."
+
+- item_nr: '23'
+  name: Repeatable
+  value: 2
+  description: "The model has been tested for performance on extreme values or protected attributes, but the testing is ad-hoc or incomplete."
+
+- item_nr: '23'
+  name: Defined
+  value: 3
+  description: "The model has been thoroughly tested for performance on extreme values and protected attributes."
+
+- item_nr: '23'
+  name: Managed and Measurable
+  value: 4
+  description:  "The testing for performance on extreme values and protected attributes is regularly reviewed and updated, and the review process is well-defined and executed."
+
+- item_nr: '23'
+  name: Continuous Improvement
+  value: 5
+  description: "The organisation has an automated system for continuously testing and monitoring the model for performance on extreme values and protected attributes, and the system is regularly reviewed and updated to ensure accuracy and completeness."
+
+
+
+
+
+- item_nr: '24'
+  name: Initial
+  value: 1
+  description: "No identification of patterns of failure."
+
+- item_nr: '24'
+  name: Repeatable
+  value: 2
+  description: "Some patterns of failure have been identified, but the process is ad-hoc or incomplete."
+
+- item_nr: '24'
+  name: Defined
+  value: 3
+  description: "Patterns of failure have been systematically identified and documented."
+
+- item_nr: '24'
+  name: Managed and Measurable
+  value: 4
+  description:  "The process for identifying and documenting patterns of failure is regularly reviewed and updated, and the review process is well-defined and executed."
+
+- item_nr: '24'
+  name: Continuous Improvement
+  value: 5
+  description: "The organization continuously reviews and updates its processes to identify and address patterns of failure."
+
+
+
+
+
+
+
+- item_nr: '25'
+  name: Initial
+  value: 1
+  description: "No processes or procedures are in place to address key failure modes in AI systems."
+
+- item_nr: '25'
+  name: Repeatable
+  value: 2
+  description: "Processes and procedures are in place to identify and address some key failure modes, but they are not consistently applied."
+
+- item_nr: '25'
+  name: Defined
+  value: 3
+  description: "Standardized processes and procedures are in place to address key failure modes. These processes and procedures are documented and followed consistently."
+
+- item_nr: '25'
+  name: Managed and Measurable
+  value: 4
+  description:  "Key failure modes are actively monitored, and processes and procedures are updated as necessary to address new or emerging failure modes. The effectiveness of these processes and procedures is measured and reported regularly."
+
+- item_nr: '25'
+  name: Continuous Improvement
+  value: 5
+  description: "The organization continuously improves its processes and procedures for addressing key failure modes in AI systems based on ongoing monitoring and analysis."
+
+
+
+
+
+
+- item_nr: '26'
+  name: Initial
+  value: 1
+  description: "Model performance is not documented."
+
+- item_nr: '26'
+  name: Repeatable
+  value: 2
+  description: "Model performance is documented on ad-hoc basis."
+
+- item_nr: '26'
+  name: Defined
+  value: 3
+  description: "Model performance is regularly documented."
+
+- item_nr: '26'
+  name: Managed and Measurable
+  value: 4
+  description:  "Performance criteria levels are actively monitored, and deviations are addressed promptly. Performance metrics are reported regularly."
+
+- item_nr: '26'
+  name: Continuous Improvement
+  value: 5
+  description: "- The model performance does not dictate the systems criteria levels.
+  - There are procedures in place to prevent this from happening."
+
+
+
+
+
+
+- item_nr: '27'
+  name: Initial
+  value: 1
+  description: "No deployment strategy is in place."
+
+- item_nr: '27'
+  name: Repeatable
+  value: 2
+  description: "A deployment strategy for AI systems has been developed, but it is not consistently applied or documented."
+
+- item_nr: '27'
+  name: Defined
+  value: 3
+  description: "A deployment strategy has been developed, and it is consistently applied and formally documented."
+
+- item_nr: '27'
+  name: Managed and Measurable
+  value: 4
+  description:  "The deployment strategy is regularly reviewed, updated, and tested."
+
+- item_nr: '27'
+  name: Continuous Improvement
+  value: 5
+  description: "The deployment strategy is continually reviewed, updated, and tested based on feedback and changes in the environment."
+
+
+
+
+
+- item_nr: '28'
+  name: Initial
+  value: 1
+  description: "There is no serving strategy documented."
+
+- item_nr: '28'
+  name: Repeatable
+  value: 2
+  description: "A serving strategy is developed, but it is not consistently applied or formally documented."
+
+- item_nr: '28'
+  name: Defined
+  value: 3
+  description: "A erving strategy has been developed, and it is consistently applied and formally documented."
+
+- item_nr: '28'
+  name: Managed and Measurable
+  value: 4
+  description:  "- The serving strategy has been implemented and monitored for effectiveness.
+  - Any deviations from the serving strategy are documented and reviewed."
+
+- item_nr: '28'
+  name: Continuous Improvement
+  value: 5
+  description: "The serving strategy is periodically reviewed and updated to ensure alignment with the organization's goals and external developments."
+
+
+
+
+
+- item_nr: '29'
+  name: Initial
+  value: 1
+  description: "There is no process to identify risks associated with the serving and/or deployment strategies."
+
+- item_nr: '29'
+  name: Repeatable
+  value: 2
+  description: "- The process to identify risks associated with the serving and/or deployment strategies is informally documented. 
+  - Risks are identified on an ad-hoc basis."
+
+
+- item_nr: '29'
+  name: Defined
+  value: 3
+  description: "The process to identify risks associated with the serving and/or deployment strategies is formally documented and consistently applied."
+
+
+- item_nr: '29'
+  name: Managed and Measurable
+  value: 4
+  description:  "The risk identification proces is integrated in the deployment proces and regularly reviewed and updated."
+
+- item_nr: '29'
+  name: Continuous Improvement
+  value: 5
+  description: "The risk identification proces is continuously monitored and assessed to keep up with changes in the system and environment."
+
+
+
+
+
+
+
+- item_nr: '30'
+  name: Initial
+  value: 1
+  description: "No risks have been addressed."
+
+- item_nr: '30'
+  name: Repeatable
+  value: 2
+  description: "Risks are adressed on an ad-hoc basis."
+
+- item_nr: '30'
+  name: Defined
+  value: 3
+  description: "There is a formal proces for risk mitigation which is consistently applied."
+
+- item_nr: '30'
+  name: Managed and Measurable
+  value: 4
+  description:  "Risk mitigation plans are periodically reviewed and updated. Effectiveness of mitigation measures is monitored."
+
+- item_nr: '30'
+  name: Continuous Improvement
+  value: 5
+  description: "Continuous monitoring and improvement of risk mitigation plans and strategies to ensure compliance with changing regulations or ethical standards."
+
+
+
+
+
+- item_nr: '31'
+  name: Initial
+  value: 1
+  description: "Model performance is not documented."
+
+- item_nr: '31'
+  name: Repeatable
+  value: 2
+  description: "Model performance is documented on ad-hoc basis."
+
+- item_nr: '31'
+  name: Defined
+  value: 3
+  description: "Model performance is regularly documented."
+
+- item_nr: '31'
+  name: Managed and Measurable
+  value: 4
+  description:  "Performance criteria levels are actively monitored, and deviations are addressed promptly. Performance metrics are reported regularly."
+
+- item_nr: '31'
+  name: Continuous Improvement
+  value: 5
+  description: "- The model performance does not dictate the systems criteria levels.
+  - There are procedures in place to prevent this from happening."
+
+
+
+
+
+
+
+- item_nr: '32'
+  name: Initial
+  value: 1
+  description: "There is no process to identify risks associated with changing data quality and potential data drift."
+
+- item_nr: '32'
+  name: Repeatable
+  value: 2
+  description: "The process to identify risks is informally documented. 
+- Risks are identified on an ad-hoc basis."
+
+- item_nr: '32'
+  name: Defined
+  value: 3
+  description: "The process to identify risks  is formally documented and consistently applied."
+
+- item_nr: '32'
+  name: Managed and Measurable
+  value: 4
+  description:  "The risk identification proces is integrated in the operation proces and regularly reviewed and updated"
+
+- item_nr: '32'
+  name: Continuous Improvement
+  value: 5
+  description: "The risk identification proces is continuously monitored and assessed to keep up with changes in the system and environment."
+
+
+
+
+
+- item_nr: '33'
+  name: Initial
+  value: 1
+  description: "There is no process to identify risks associated with model decay."
+
+- item_nr: '33'
+  name: Repeatable
+  value: 2
+  description: "The process to identify risks is informally documented. 
+- Risks are identified on an ad-hoc basis."
+
+- item_nr: '33'
+  name: Defined
+  value: 3
+  description: "The process to identify risks  is formally documented and consistently applied."
+
+- item_nr: '33'
+  name: Managed and Measurable
+  value: 4
+  description:  "The risk identification proces is integrated in the operation proces and regularly reviewed and updated."
+
+- item_nr: '33'
+  name: Continuous Improvement
+  value: 5
+  description: "The risk identification proces is continuously monitored and assessed to keep up with changes in the system and environment."
+
+
+
+
+
+
+- item_nr: '34'
+  name: Initial
+  value: 1
+  description: "No risks have been addressed."
+
+- item_nr: '34'
+  name: Repeatable
+  value: 2
+  description: "Risks are adressed on an ad-hoc basis."
+
+- item_nr: '34'
+  name: Defined
+  value: 3
+  description: "There is a formal proces for risk mitigation which is consistently applied."
+
+- item_nr: '34'
+  name: Managed and Measurable
+  value: 4
+  description:  "Risk mitigation plans are periodically reviewed and updated. Effectiveness of mitigation measures is monitored."
+
+- item_nr: '34'
+  name: Continuous Improvement
+  value: 5
+  description: "Continuous monitoring and improvement of risk mitigation plans and strategies to ensure compliance with changing regulations or ethical standards."
+
+
+
+
+
+
+- item_nr: '35'
+  name: Initial
+  value: 1
+  description: "There are no reviews in place."
+
+- item_nr: '35'
+  name: Repeatable
+  value: 2
+  description: "AI applications are not completely or on an ad-hoc basis reviewed."
+
+- item_nr: '35'
+  name: Defined
+  value: 3
+  description: "There is a formal and periodic proces for reviewing the AI applications with regard to the ethical values."
+
+- item_nr: '35'
+  name: Managed and Measurable
+  value: 4
+  description:  "The proces for reviewing the AI applications is periodically reviewed and updated."
+
+- item_nr: '35'
+  name: Continuous Improvement
+  value: 5
+  description: "Reviews are integrated with the organization's quality management system and continuously improved."
+
+
+
+
+
+- item_nr: '36'
+  name: Initial
+  value: 1
+  description: "There is no update strategy defined."
+
+- item_nr: '36'
+  name: Repeatable
+  value: 2
+  description: "- A strategy for updating the application is in place, but it is not comprehensive.
+  - Model changes are nor formally documented."
+
+- item_nr: '36'
+  name: Defined
+  value: 3
+  description: "- A comprehensive strategy for updating the application is in place and periodically reviewed.
+  - model changes are formally documented."
+
+- item_nr: '36'
+  name: Managed and Measurable
+  value: 4
+  description:  "- The strategy is integrated with the organization's change management framework.
+  - The strategy is tested periodically to ensure effectiveness."
+
+
+- item_nr: '36'
+  name: Continuous Improvement
+  value: 5
+  description: "The strategy is continuously improved based on feedback and analysis of incidents, and includes a plan for retiring the AI application when necessary."
+
+
+
+
+
+
+- item_nr: '37'
+  name: Initial
+  value: 1
+  description: "No complaints process is in place."
+
+- item_nr: '37'
+  name: Repeatable
+  value: 2
+  description: "An informal complaints process is established, but it is poorly communicated to users."
+
+- item_nr: '37'
+  name: Defined
+  value: 3
+  description: "A complaints process is formally established and clearly communicated to users."
+
+- item_nr: '37'
+  name: Managed and Measurable
+  value: 4
+  description:  "The complaints process is regularly reviewed and improved based on feedback from users."
+
+- item_nr: '37'
+  name: Continuous Improvement
+  value: 5
+  description: "The complaints process is integrated into the organization's overall continuous improvement efforts."
+
+
+
+
+
+
+- item_nr: '38'
+  name: Initial
+  value: 1
+  description: "No problem-to-resolution process is defined."
+
+- item_nr: '38'
+  name: Repeatable
+  value: 2
+  description: "A problem-to-resolution process is defined, but not consistently used or documented"
+
+- item_nr: '38'
+  name: Defined
+  value: 3
+  description: "The problem-to-resolution process is formally documented and followed for significant problems."
+
+- item_nr: '38'
+  name: Managed and Measurable
+  value: 4
+  description:  "The problem-to-resolution process is consistently used, and resolutions are documented"
+
+- item_nr: '38'
+  name: Continuous Improvement
+  value: 5
+  description: "The problem-to-resolution process is actively monitored and reviewed for improvement."
+
+
+
+
+
+
+- item_nr: '39'
+  name: Initial
+  value: 1
+  description: "The risks of decommissioning the AI system have not been assessed."
+
+- item_nr: '39'
+  name: Repeatable
+  value: 2
+  description: "The risks of decommissioning the AI system are assessed on an ad-hoc basis and not formally documented."
+
+- item_nr: '39'
+  name: Defined
+  value: 3
+  description: "The risks of decommissioning the AI system have been assessed and are formally documented."
+
+- item_nr: '39'
+  name: Managed and Measurable
+  value: 4
+  description:  "The risks of decommissioning the AI system are periodically reviewed and updated as needed."
+
+- item_nr: '39'
+  name: Continuous Improvement
+  value: 5
+  description: "The proces of assessing risks of decommissioning the AI system is periodically reviewed and updated."
+
+
+
+
+
+
+- item_nr: '40'
+  name: Initial
+  value: 1
+  description: "No strategy for managing risks associated with decommissioning the AI system is in place."
+
+- item_nr: '40'
+  name: Repeatable
+  value: 2
+  description: "A strategy for managing risks associated with decommissioning the AI system is in place, but it is not documented."
+
+- item_nr: '40'
+  name: Defined
+  value: 3
+  description: "A strategy for addressing risks associated with decommissioning the AI system is in place and is formally documented."
+
+- item_nr: '40'
+  name: Managed and Measurable
+  value: 4
+  description:  "The strategy for addressing risks associated with decommissioning the AI system is periodically reviewed and updated as needed."
+
+- item_nr: '40'
+  name: Continuous Improvement
+  value: 5
+  description: "The strategy for addressing risks of decommissioning the AI system is periodically reviewed and updated."

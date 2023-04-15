@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'base',
     'projects',
     'irp_assessment',
+    'frameworks',
 
 ]
 

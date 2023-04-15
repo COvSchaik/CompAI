@@ -34,6 +34,13 @@
   description: The responsibility for ensuring and demonstrating that AI systems adhere to 
     defined organisational values has been assigned.
   deliverable: Name(s) of the person assigned.  
+
+- item_nr: '6'
+  stage: design
+  category: Organisational Governance
+  respondent: Project manager
+  description: The objectives of the AI application have been defined and documented.
+  deliverable: Short description of the objectives of the AI application. 
   
 - item_nr: '7'
   stage: design
@@ -252,7 +259,7 @@
   stage: operation
   category: Maintain
   respondent: Product owner
-  description: . A complaints process has been established for users of the AI system to raise concerns or suggest improvements.
+  description: A complaints process has been established for users of the AI system to raise concerns or suggest improvements.
   deliverable: Short description of the complaints process (e.g., point of contact).
 
 - item_nr: '38'

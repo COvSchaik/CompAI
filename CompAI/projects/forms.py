@@ -30,10 +30,13 @@ class AssessmentForm(forms.ModelForm):
     
     class Meta:
         model = Assessment
-        fields = ['name']
+        fields = ['name', 'framework']
         widgets = {
             'name': forms.TextInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'Your Assessment name',
-            }),                
+            }),
+            'framework': forms.Select(                 
+                attrs={'class': 'form-select',
+            }),
         }
