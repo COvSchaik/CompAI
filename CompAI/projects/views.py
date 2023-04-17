@@ -1,12 +1,17 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from datetime import datetime
+from django.utils import timezone
+from dateutil.relativedelta import relativedelta
+from django.db.models import Avg
+
 from .forms import ProjectForm, AssessmentForm
 from django.contrib.auth.models import User
 from .models import Project
 from irp_assessment.models import Assessment
 from irp_assessment.models import Item
 from frameworks.models import Framework
-from datetime import datetime
+
 
 import yaml
 
@@ -29,13 +34,43 @@ def projects(request):
             proj.members.add(request.user)    
             proj.save()
         return redirect("detail/" + str(proj.id))
-    
-
     else:
         form = ProjectForm()
 
+    limit = 0
+    notassessed = 0
+    low = 5
+    count = 0
+    avg = 0
+    for proj in project_list:
+        try:
+            latest_instance = proj.assessments.latest('last_updated')            
+            diff = relativedelta(timezone.now(),latest_instance.last_updated)
+            passed_months = diff.months + 12 * diff.years        
+            if passed_months >=6:
+                limit+=1 
+                
+            average_maturity = Item.objects.filter(assessment=latest_instance).aggregate(Avg('maturity'))['maturity__avg']
+            proj.all_items_saved = latest_instance.items.all().filter(saved=False).count() == 0
+            proj.avg = average_maturity
+            print(average_maturity)
+            avg += average_maturity
+            count += 1
+            if low > average_maturity:
+                low = average_maturity
+                
+
+        except Assessment.DoesNotExist:
+            latest_instance = None        
+            notassessed += 1
+        
+            
+    if count!= 0:
+        avg = avg/count    
+
     
-    context = {'projects': project_list, 'form': form, 'userdisplay': userdisplay, 'archived':archived}
+    context = {'projects': project_list, 'form': form, 'userdisplay': userdisplay, 'archived':archived,
+               'limit': limit, 'notassessed': notassessed, 'avg': avg, 'low': low}
     return render (request, 'projects.html', context)
 
 
@@ -102,22 +137,21 @@ def detail(request, pk):
                 item.item_nr = i.item_nr
                 item.stage = i.stage
                 item.template = i
-                # item.category = i["category"]
-                # item.respondent = i["respondent"]
-                # item.description =i["description"]
-                # item.deliverable_description = i["deliverable"]
+                item.maturity = 5
+                item.saved = True                
                 item.modified_by = request.user
-
-
                 item.save()
-                item_count = item_count + 1
-
+                item_count = item_count + 1       
 
             
         return redirect("/projects/detail/" + str(project.id))
     else:
-        asses_form = AssessmentForm()
-
+        asses_form = AssessmentForm()    
+    for i in assessmentdisplay:
+        progress = i.items.filter(saved=True).count()
+        total = i.items.count()
+        i.perc = (progress/total)*100
+    
     
       
     context = {'project': project, 'form': form, 'asses_form': asses_form, 'memberdisplay': memberdisplay,

@@ -24,11 +24,6 @@ class Item (models.Model):
     
     stage = models.CharField(max_length=100, default="design")
     saved = models.BooleanField(default=False)
-    # category = models.CharField(max_length=100, null=True, blank=True)
-    # respondent = models.CharField(max_length=100, null=True, blank=True)
-    # description = models.TextField(max_length=1000, null=True, blank=True)
-    # deliverable_description = models.TextField(max_length=1000, null=True, blank=True)
-
     last_modified = models.DateTimeField(auto_now=True)   
     modified_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True,) 
 

@@ -50,21 +50,23 @@
         {%for item in items %}
         <div class="page-body">          
           <div class="container-xl">
-            <div class="row  row-cards">
-              <div class="card">
-                <div class="card-body">
-                  <ul class="steps steps-blue steps-counter my-4">
-                    <li class="step-item {%if item.stage == "design"%} active {%endif%}"><a href="{%url 'assessment' assessment.id "design"%}">Design</a></li>
-                    <li class="step-item {%if item.stage == "development"%} active {%endif%}"><a href="{%url 'assessment' assessment.id "development"%}">Development</a></li>
-                    <li class="step-item{%if item.stage == "evaluation"%} active {%endif%}"><a href="{%url 'assessment' assessment.id "evaluation"%}">Evaluation</a></li>
-                    <li class="step-item{%if item.stage == "operation"%} active {%endif%}"><a href="{%url 'assessment' assessment.id "operation"%}">Operation</a></li>
-                    <li class="step-item{%if item.stage == "retirement"%} active {%endif%}"><a href="{%url 'assessment' assessment.id "retirement"%}">Retirement</a></li>
-                  </ul>
+            <div class="row  row-cards">              
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <ul class="steps steps-blue steps-counter my-4">
+                      <li class="step-item {%if item.stage == "design"%} active {%endif%}"><a href="{%url 'assessment' assessment.id "design"%}">Design</a></li>
+                      <li class="step-item {%if item.stage == "development"%} active {%endif%}"><a href="{%url 'assessment' assessment.id "development"%}">Development</a></li>
+                      <li class="step-item{%if item.stage == "evaluation"%} active {%endif%}"><a href="{%url 'assessment' assessment.id "evaluation"%}">Evaluation</a></li>
+                      <li class="step-item{%if item.stage == "operation"%} active {%endif%}"><a href="{%url 'assessment' assessment.id "operation"%}">Operation</a></li>
+                      <li class="step-item{%if item.stage == "retirement"%} active {%endif%}"><a href="{%url 'assessment' assessment.id "retirement"%}">Retirement</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div class="col-4">
-                <div class="row row-cards">                  
-                  <div class="col-12">                    
+                <div class="row row-cards">
+                  <div class="col-12">
                     <div class="card">
                       <div class="card-header">
                         <h3 class="card-title">Category: {{item.template.category}}</h3>
@@ -81,10 +83,55 @@
                           <p></p>
                         </div>                          
                       </div>
-                    </div>                   
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="card">
+                      {% comment %} <div class="card-header">
+                        <h3 class="card-title">Graph</h3>
+                      </div>   {% endcomment %}
+                      <div class="card-body">
+                        <h4>Progress:{{progress}}/{{total}}</h4>
+                        <div class="progress">
+                          <div class="progress-bar bg-success" style="width:  {{perc}}%" role="progressbar" aria-valuenow="{{perc}}" aria-valuemin="0" aria-valuemax="100" aria-label="{{perc}}% Complete">
+                            <span class="visually-hidden">{{perc}}% Complete</span>
+                          </div>                          
+                        </div>
+                        <div class="pb-2"></div>
+                        <h4>Average Maturity: {{avg}}</h4>
+                        <div class="progress">
+                          <div class="progress-bar" style="width:  {{avgperc}}%" role="progressbar" aria-valuenow="{{avg}}" aria-valuemin="0" aria-valuemax="100" aria-label="{{avgperc}}% Complete">
+                            <span class="visually-hidden">Average Maturity: {{avg}}</span>
+                          </div>
+                        </div>
+                        <div class="hr-text">Average Maturity per Step</div>
+                        <div id="chart"></div>
+                        <script>
+                          var options = {
+                            series: [{
+                            name: 'Average Maturity',
+                            data: {{data_values|safe }},
+                          }],
+                            chart: {
+                            height: 340,
+                            type: 'radar',
+                          },                          
+                          xaxis: {
+                            categories: {{ stages|safe}} ,
+                          }
+                          };
+                          
+
+                          var chart = new ApexCharts(document.querySelector("#chart"), options);
+                          chart.render();
+                        
+                        </script>
+                      </div>                    
+                    </div>                    
                   </div>
                 </div>                
               </div>
+        
               <div class="col-8">
                 <form method=POST>
                   {% csrf_token %} 
@@ -100,7 +147,7 @@
                             <path d="M10.24 3.957l-8.422 14.06a1.989 1.989 0 0 0 1.7 2.983h16.845a1.989 1.989 0 0 0 1.7 -2.983l-8.423 -14.06a1.989 1.989 0 0 0 -3.4 0z"></path>
                             <path d="M12 9v4"></path>
                             <path d="M12 17h.01"></path>
-                        </svg>
+                          </svg>
                         </div>                     
                         {%else%}
                         <div class="ribbon bg-green">   
@@ -112,11 +159,8 @@
                         </svg>
                         </div>  
                         {%endif%}                 
-                      </div>
-                      
-                    </div> 
-
-
+                      </div>                      
+                    </div>
                     <div class="card-body">
                       <div class="row">
                         <div class="col-6">
@@ -124,20 +168,11 @@
                             <h4> {{level.value}}: {{level.name}}</h4>
                             {{level.description}}
                             <p></p>
-                          {%endfor%}
-                          
-                        </div>                      
-                      {% comment %} </div>
-                      <div class="row"> {% endcomment %}
+                          {%endfor%}                          
+                        </div>
                         <div class="col-6">
                           {{form.as_p}}
-                        </div>
-
-                        <div class="col-6">
-                          
-                          
-                                                  
-                        </div>
+                        </div>                        
                       </div>                    
                     </div>
                     <div class="card-footer">
@@ -163,14 +198,11 @@
                       </ul>
                         <button type="submit" class="btn btn-primary ms-auto" name = 'action' value = "save-item">Save</button>                      
                       </div>
-                    
-
-                      
                     </div>
                   </div> 
                 </form>
-              </div>
-            </div>          
+              </div>              
+            </div>
           </div>
         </div>
       </div>

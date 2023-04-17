@@ -22,8 +22,8 @@
         <div class="col-auto ms-auto d-print-none">
           <div class="btn-list">
             <span class="d-none d-sm-inline">
-              <a href="#" class="btn btn-dark">
-                New view
+              <a href="{%url 'projects'%}" class="btn btn-dark">
+                Back to Projects
               </a>
             </span>
             <a href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#modal-new-assessment">
@@ -164,17 +164,19 @@
                       <td class="sort-type">{{dis.last_updated | date:'d-m-Y h:s'}}</td>
                       <td class="sort-score">{{dis.creator}}</td>
                       <td class="sort-quantity">{{dis.stage}}</td>
-                      <td class="sort-progress" data-progress="30">
+                      <td class="sort-progress" data-progress="{{dis.perc}}">
+                        {%with dis.id as assessment_id%}
                         <div class="row align-items-center">
-                          <div class="col-12 col-lg-auto">30%</div>
+                          <div class="col-12 col-lg-auto">{{dis.perc}}%</div>
                           <div class="col">
                             <div class="progress" style="width: 5rem">
-                              <div class="progress-bar" style="width: 30%" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" aria-label="30% Complete">
-                                <span class="visually-hidden">30% Complete</span>
+                              <div class="progress-bar" style="width:{{dis.perc}}%" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" aria-label="30% Complete">
+                                <span class="visually-hidden">{{perc.assessment_id}}% Complete</span>
                               </div>
                             </div>
                           </div>
                         </div>
+                        {% endwith %}
                       </td>
                       <td>
                         <a href="{%url 'assessment' dis.id dis.stage%}?page=1"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">

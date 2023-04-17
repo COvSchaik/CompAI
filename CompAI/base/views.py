@@ -6,9 +6,12 @@ from django.contrib import messages
 import yaml
 
 from frameworks.models import Framework, FrameItem, FrameLevel
+from projects.models import Project
 
 @login_required(login_url='signin')
 def index(request):
+    # Project.objects.all().delete()
+
     frame = Framework.objects.all()
     if(len(frame) == 0):
         frame = Framework.objects.create(name = "CapAI")
