@@ -11,6 +11,7 @@ from .models import Project
 from irp_assessment.models import Assessment
 from irp_assessment.models import Item
 from frameworks.models import Framework
+from sds.models import SDS, SDSQuestion
 
 
 import yaml
@@ -26,13 +27,17 @@ def projects(request):
         form = ProjectForm(request.POST or None)        
         if form.is_valid():
             proj = form.save(commit=False)
-            proj.creator = request.user
+            proj.creator = request.user            
+            proj.sds = SDS.objects.create()
             proj.save()
             selected_users = request.POST.getlist('form-project-manager[]')
             # Add the selected users to the project's team members
             proj.members.set(selected_users) 
             proj.members.add(request.user)    
             proj.save()
+            for i in range(1, 13):
+                sds_q = SDSQuestion.objects.create(sds = proj.sds, number = i)
+                
         return redirect("detail/" + str(proj.id))
     else:
         form = ProjectForm()
@@ -53,11 +58,11 @@ def projects(request):
             average_maturity = Item.objects.filter(assessment=latest_instance).aggregate(Avg('maturity'))['maturity__avg']
             proj.all_items_saved = latest_instance.items.all().filter(saved=False).count() == 0
             proj.avg = average_maturity
-            print(average_maturity)
-            avg += average_maturity
-            count += 1
-            if low > average_maturity:
-                low = average_maturity
+            if average_maturity != None:
+                avg += average_maturity
+                count += 1
+                if low > average_maturity:
+                    low = average_maturity
                 
 
         except Assessment.DoesNotExist:
@@ -76,6 +81,8 @@ def projects(request):
 
 def delete_project(request, pk):
     project = Project.objects.get(pk=pk)
+    sds = project.sds
+    sds.delete()
     project.delete()
     return redirect('/projects')
 
@@ -123,7 +130,7 @@ def detail(request, pk):
         if form.is_valid():
             asses = form.save(commit=False)
             asses.creator = request.user
-            asses.project = project            
+            asses.project = project
             asses.save()
 
             template = Framework.objects.get(name= asses.framework)          
@@ -137,8 +144,8 @@ def detail(request, pk):
                 item.item_nr = i.item_nr
                 item.stage = i.stage
                 item.template = i
-                item.maturity = 5
-                item.saved = True                
+                # item.maturity = 5
+                # item.saved = True                
                 item.modified_by = request.user
                 item.save()
                 item_count = item_count + 1       

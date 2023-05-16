@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'projects',
     'irp_assessment',
     'frameworks',
+    'sds',
+    'exportpdf',
+    'esb',
 
 ]
 

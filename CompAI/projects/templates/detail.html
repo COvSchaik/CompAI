@@ -147,7 +147,7 @@
                 <thead>
                   <tr>
                     <th><button class="table-sort" data-sort="sort-name">Name</button></th>
-                    <th><button class="table-sort" data-sort="sort-date">Start-date</button></th>
+                    <th><button class="table-sort" data-sort="sort-city">Start-date</button></th>
                     <th><button class="table-sort" data-sort="sort-type">Last Edited</button></th>
                     <th><button class="table-sort" data-sort="sort-score">Creator</button></th>
                     <th><button class="table-sort" data-sort="sort-quantity">Stage</button></th>
@@ -160,7 +160,7 @@
                   {%for dis in assessmentdisplay %}
                     <tr>
                       <td class="sort-name">{{dis.name}}</td>
-                      <td class="sort-date">{{dis.startdate | date:'d-m-Y'}}</td>
+                      <td class="sort-city">{{dis.startdate | date:'d-m-Y'}}</td>
                       <td class="sort-type">{{dis.last_updated | date:'d-m-Y h:s'}}</td>
                       <td class="sort-score">{{dis.creator}}</td>
                       <td class="sort-quantity">{{dis.stage}}</td>

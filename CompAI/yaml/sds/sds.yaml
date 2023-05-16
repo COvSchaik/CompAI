@@ -1,0 +1,36 @@
+1: 
+  title: Contact details provider.
+  text: Name, address and contact details of the provider.
+2: 
+  title: Alternative contact details provider.
+  text: Where another person carries out submission of information on behalf of the provider, the name, address and contact details of that person.
+3: 
+  title: Contact details authorised representative.
+  text: Name, address and contact details of the authorised representative, where applicable.
+4: 
+  title: System details.
+  text: AI system trade name and any ambiguous reference allowing identification and traceability of the AI system.
+5: 
+  title: System description.
+  text: Description of the intended purpose of the AI system.
+6: 
+  title: Status.
+  text: Status of the AI system (on the market, or in service; not placed on the market/in service, recalled).
+7: 
+  title: Certificate.
+  text: Type, number and expiry date of the certificate issued by the notified body and the name of identification number of that notified body (where applicable).
+8: 
+  title: Certificate copy.
+  text: A scanned copy of the certificate referred to in point 7 (where applicable).
+9: 
+  title: Member states list.
+  text: Member States in which the AI system is or has been placed on the market, put into service or made available in the Union.
+10: 
+  title: Conformity declaration.
+  text: A copy of the EU declaration of conformity referred to in Article 48.
+11: 
+  title: Instructions of use.
+  text: Electronic instructions for use; this information shall not be provided for highrisk AI systems in the areas of law enforcement and migration, asylum and border control management referred to in Annex III, points 1, 6 and 7.
+12: 
+  title: Additional information.
+  text: URL for additional information (optional). Providing this link is optional, yet in our view it is useful to include it here as well as in the external scorecard, which we are proposing below as an additional document to be made available publicly.

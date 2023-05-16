@@ -21,4 +21,7 @@ urlpatterns = [
     path('', include('base.urls')),
     path ('projects/', include('projects.urls')),
     path('irp/', include('irp_assessment.urls')),
+    path('sds/', include('sds.urls')),
+    path('export/', include('exportpdf.urls')),
+    path('esc/', include('esb.urls')),
 ]

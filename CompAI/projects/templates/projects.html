@@ -22,9 +22,9 @@
               <div class="col-auto ms-auto d-print-none">
                 <div class="btn-list">
                   <span class="d-none d-sm-inline">
-                    <a href="#" class="btn btn-dark">
+                    {% comment %} <a href="#" class="btn btn-dark">
                       New view
-                    </a>
+                    </a> {% endcomment %}
                   </span>
                   <a href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#modal-project">
                     <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
@@ -240,63 +240,64 @@
           </div>
         </div>
 
-      
 
 
 
-    <div class="modal modal-blur fade" id="modal-project" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">New Project</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>          
 
-          <form method="POST">
-            {% csrf_token %}
-            <div class="modal-body">
-              
-              <div class="mb-3">                
-              <div class="row">    
-                {{ form.as_p }}          
-              </div>
-              <div class="form-selectgroup form-selectgroup-boxes d-flex flex-column">
-                Members
-                {%for result in userdisplay%}
-                  {%if result.id != user.id %}
-                    <label class="form-selectgroup-item flex-fill">
-                      <input type="checkbox" name="form-project-manager[]" value="{{result.id}}" class="form-selectgroup-input" >
-                      <div class="form-selectgroup-label d-flex align-items-center p-3">
-                        <div class="me-3">
-                          <span class="form-selectgroup-check"></span>
-                        </div>
-                        <div class="form-selectgroup-label-content d-flex align-items-center">
-                          <span class="avatar me-3" style="background-image: url(./static/avatars/000m.jpg)"></span>
-                          <div>
-                            <div class="font-weight-medium">{{result.first_name}} {{result.last_name}} - {{result.username}}</div>
-                            <div class="text-muted">{{result.email}}</div>
+        <div class="modal modal-blur fade" id="modal-project" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">New Project</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>              
+              <div class="modal-body">
+                <form method="POST">
+                  {% csrf_token %}              
+                  <div class="row">    
+                    {{ form.as_p }}          
+                  </div>
+                  <div class="form-selectgroup form-selectgroup-boxes d-flex flex-column">
+                    Members
+                    {%for result in userdisplay%}
+                      {%if result.id != user.id %}
+                        <label class="form-selectgroup-item flex-fill">
+                          <input type="checkbox" name="form-project-manager[]" value="{{result.id}}" class="form-selectgroup-input" >
+                          <div class="form-selectgroup-label d-flex align-items-center p-3">
+                            <div class="me-3">
+                              <span class="form-selectgroup-check"></span>
+                            </div>
+                            <div class="form-selectgroup-label-content d-flex align-items-center">
+                              <span class="avatar me-3" style="background-image: url(./static/avatars/000m.jpg)"></span>
+                              <div>
+                                <div class="font-weight-medium">{{result.first_name}} {{result.last_name}} - {{result.username}}</div>
+                                <div class="text-muted">{{result.email}}</div>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                    </label>
-                  {%endif%}
-                {%endfor%} 
-              </div>
+                        </label>
+                      {%endif%}
+                    {%endfor%} 
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
+                    Cancel
+                  </a>
+                  <button type ="submit" class="btn btn-primary ms-auto">
+                    <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
+                    Create new Project
+                  </button>
+                </div>
+              </form>
             </div>
-            <div class="modal-footer">
-              <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
-                Cancel
-              </a>
-              <button type ="submit" class="btn btn-primary ms-auto">
-                <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
-                Create new Project
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
+          </div>
+        </div>      
+
+
+
+    
   {% endblock content %}
     
   <!-- Specific Page JS goes HERE  -->

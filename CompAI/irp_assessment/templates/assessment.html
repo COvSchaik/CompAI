@@ -5,6 +5,7 @@
 
 {% block content %}      
 {%load static%}
+{% load custom_filters %}
         <!-- Page header -->
         <div class="page-header d-print-none text-white">
           <div class="container-xl">
@@ -40,7 +41,8 @@
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                       <path d="M9 14l-4 -4l4 -4"></path>
                       <path d="M5 10h11a4 4 0 1 1 0 8h-1"></path>
-                   </svg>                  </a>                  
+                   </svg>
+                  </a>
                 </div>
               </div>              
             </div>
@@ -166,7 +168,13 @@
                         <div class="col-6">
                           {%for level in item.template.levels.all %}
                             <h4> {{level.value}}: {{level.name}}</h4>
-                            {{level.description}}
+                            {% for item in level.description|split_string:" - " %}
+                                {%if not forloop.first%}
+                                  -
+                                {%endif%}
+                                 {{ item }}
+                                <br>
+                            {% endfor %}       
                             <p></p>
                           {%endfor%}                          
                         </div>
