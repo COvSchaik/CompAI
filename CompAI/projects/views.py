@@ -12,6 +12,7 @@ from irp_assessment.models import Assessment
 from irp_assessment.models import Item
 from frameworks.models import Framework
 from sds.models import SDS, SDSQuestion
+from esb.models import ESC, ESCQuestion
 
 
 import yaml
@@ -29,6 +30,7 @@ def projects(request):
             proj = form.save(commit=False)
             proj.creator = request.user            
             proj.sds = SDS.objects.create()
+            proj.esc = ESC.objects.create()
             proj.save()
             selected_users = request.POST.getlist('form-project-manager[]')
             # Add the selected users to the project's team members
@@ -36,7 +38,9 @@ def projects(request):
             proj.members.add(request.user)    
             proj.save()
             for i in range(1, 13):
-                sds_q = SDSQuestion.objects.create(sds = proj.sds, number = i)
+                SDSQuestion.objects.create(sds = proj.sds, number = i)
+            for i in range(1, 11):
+                ESCQuestion.objects.create(esc = proj.esc, number = i)
                 
         return redirect("detail/" + str(proj.id))
     else:
@@ -47,6 +51,8 @@ def projects(request):
     low = 5
     count = 0
     avg = 0
+    if project_list.count() == 0:
+        low = 0 
     for proj in project_list:
         try:
             latest_instance = proj.assessments.latest('last_updated')            
@@ -63,13 +69,14 @@ def projects(request):
                 count += 1
                 if low > average_maturity:
                     low = average_maturity
+                    
                 
 
         except Assessment.DoesNotExist:
             latest_instance = None        
             notassessed += 1
         
-            
+       
     if count!= 0:
         avg = avg/count    
 

@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+
+
+{% block title %} Projects {% endblock %} 
+
+{% block content %}      
+{%load static%}
+        <!-- Page header -->
+        <div class="page-header d-print-none text-white">
+          <div class="container-xl">
+            <div class="row g-2 align-items-center">
+              <div class="col">
+                <!-- Page pre-title -->
+                  <div class="page-pretitle">
+                    ESC Template
+                  </div>
+                  <h2 class="page-title">                    
+                    {{template.name}}
+                  </h2>                
+              </div>
+              <!-- Page title actions -->
+              <div class="col-auto ms-auto d-print-none">
+                <div class="btn-list">                  
+                  <a href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#modal-danger">
+                    <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-back-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M9 14l-4 -4l4 -4"></path>
+                      <path d="M5 10h11a4 4 0 1 1 0 8h-1"></path>
+                   </svg>
+                   Back to ESC Overview
+                  </a>
+                  <a href="#" class="btn btn-primary d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#modal-danger" aria-label="Create new report">
+                    <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-back-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M9 14l-4 -4l4 -4"></path>
+                      <path d="M5 10h11a4 4 0 1 1 0 8h-1"></path>
+                   </svg>                  </a>     
+                </div> 
+              </div>              
+            </div>
+          </div>
+        </div>
+        <!-- Page body -->
+        <div class="page-body">
+          <div class="container-xl">
+            <div class="row  row-cards">
+              <div class="col-2"></div>
+              <div class="col-12">
+                <div class="row row-cards">
+                  <div class="col-12">
+                    <div class="card">
+                      <form method=POST>
+                        {%csrf_token%}
+                        <div class="card-header">
+                          <h3 class="card-title">
+                            Create a template to load into your projects ESC
+                          </h3>                          
+                        </div>
+                        <div class="card-body"> 
+                          {%for form in forms%}
+                            {%if form.first%}
+                              <fieldset class="form-fieldset">
+                            {%endif%}
+                              <div class="row row-cards pb-5">
+                                {%if form.first%}
+                                <h1> {{form.title}}</h1>
+                                {%endif%}
+                                <div class="col-md-6 ">
+                                  <div class="d-flex align-items-center"style="height: 100px;">
+                                    <div>
+                                      {{forloop.counter}}. {{ form.description }}                                     
+                                    </div>                                                                
+                                  </div>
+                                </div>
+                                <div class="col-md-6"style=" ">                              
+                                    {{ form.answer }}                              
+                                </div>
+                                {% comment %} <div class="hr"></div> {% endcomment %}
+                              </div>
+                            {%if form.last%}
+                              </fieldset>
+                            {%endif%}
+                          {%endfor%}                    
+                        </div>
+                        <div class="card-footer text-end">
+                          <div class="d-flex">                            
+                            <button type="submit" class="btn btn-primary ms-auto" name = 'action' value = "save-sds">Save</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div> 
+                  </div>
+                  
+                </div>                
+              </div>
+
+              <div class="col-4">                
+              </div>
+            </div>          
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="modal modal-blur fade" id="modal-danger" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-status bg-danger"></div>
+            <div class="modal-body text-center py-4">
+              <!-- Download SVG icon from http://tabler-icons.io/i/alert-triangle -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-danger icon-lg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 9v2m0 4v.01" /><path d="M5 19h14a2 2 0 0 0 1.84 -2.75l-7.1 -12.25a2 2 0 0 0 -3.5 0l-7.1 12.25a2 2 0 0 0 1.75 2.75" /></svg>
+              <h3>Are you sure?</h3>
+              <div class="text-muted">If you leave now you will lose unsaved changes!</div>
+            </div>
+            <div class="modal-footer">
+              <div class="w-100">
+                <div class="row">
+                  <div class="col"><a href="#" class="btn w-100" data-bs-dismiss="modal">
+                      Cancel
+                  </a></div>
+                  <div class="col"><a href="{%url 'esc'%}" class="btn btn-danger w-100">
+                      Back to ESC page
+                  </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  {% endblock content %}
+    
+  <!-- Specific Page JS goes HERE  -->
+  {% block javascripts %}
+
+    <!-- Libs JS -->
+    <!-- Tabler Core -->
+    <<script src="{% static 'dist/js/tabler.min.js'%}" defer></script>
+    <script src="{% static 'dist/js/demo.min.js'%}" defer></script>
+
+    
+
+  {% endblock javascripts %}

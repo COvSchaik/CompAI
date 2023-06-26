@@ -1,0 +1,42 @@
+1: 
+  title: Purpose
+  text: Describe the AI system in terms of its objective and functionality
+2: 
+  title: Values
+  text: Outline the organisational values and norms that underpin the development of the AI system.
+3: 
+  title: Data
+  text: Define the data used in terms of its public, proprietary and/or private nature. 
+4: 
+  title: Data
+  text: State whether the data used is internal and/or provided by a third party.
+5: 
+  title: Data
+  text: Specify how consent has been secured for the use of this data. 
+6: 
+  title: Data
+  text: State whether the AI system uses protected attributes.
+7: 
+  title: Governance
+  text: State the person responsible for the AI system.
+8: 
+  title: Governance
+  text: Provide a point of contact for any complaints or concerns.
+9: 
+  title: Governance
+  text: State the date when the initial AI system was deployed.
+10: 
+  title: Governance
+  text: Specify the dates of the last and next review of the AI system.
+11: 
+  title: Graphical representation.
+  text: Summarize
+12: 
+  title: Graphical representation.
+  text: URL for additional information (optional). Providing this link is optional, yet in our view it is useful to include it here as well as in the external scorecard, which we are proposing below as an additional document to be made available publicly.
+13: 
+  title: Graphical representation.
+  text: Electronic instructions for use; this information shall not be provided for highrisk AI systems in the areas of law enforcement and migration, asylum and border control management referred to in Annex III, points 1, 6 and 7.
+14: 
+  title: Graphical representation.
+  text: URL for additional information (optional). Providing this link is optional, yet in our view it is useful to include it here as well as in the external scorecard, which we are proposing below as an additional document to be made available publicly.
