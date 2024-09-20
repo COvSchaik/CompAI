@@ -1,6 +1,9 @@
 # CompAI
 CompAI is a compliance tool that uses CapAI principles to track and give insight into the conformity with the AI-act of your systems.
 
+For background info on the whole project access my bachelor thesis on:
+https://theses.liacs.nl/2638
+
 Learn more about CapAI at: https://artificialintelligenceact.eu/assessment/ 
 
 
